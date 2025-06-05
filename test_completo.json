@@ -1,0 +1,78 @@
+{
+  "pdf_path": "input/documento.pdf",
+  "output_path": "output/documento_completo_firmado.pdf",
+  "insertions": [
+    {
+      "type": "text",
+      "content": "DOCUMENTO FIRMADO DIGITALMENTE",
+      "position": [50, 50],
+      "font_size": 14,
+      "color": [0.2, 0.2, 0.8],
+      "pages": "first"
+    },
+    {
+      "type": "text",
+      "content": "Firmado electrónicamente según Ley N° 27269 - Firma Digital",
+      "position": [50, 750],
+      "font_size": 9,
+      "color": [0.5, 0.5, 0.5],
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Fecha: 05 de Junio 2025 - 11:42:32 GMT",
+      "position": [50, 765],
+      "font_size": 8,
+      "color": [0.6, 0.6, 0.6],
+      "pages": "all"
+    },
+    {
+      "type": "image",
+      "source": "assets/rubrica.png",
+      "position": [400, 700],
+      "width": 120,
+      "height": 60,
+      "pages": "last"
+    },
+    {
+      "type": "image",
+      "source": "assets/qr.png",
+      "position": [480, 600],
+      "width": 80,
+      "height": 80,
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "QR de Verificación",
+      "position": [485, 590],
+      "font_size": 8,
+      "color": [0.3, 0.3, 0.3],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "✓ DOCUMENTO VERIFICADO",
+      "position": [400, 780],
+      "font_size": 10,
+      "color": [0, 0.8, 0],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "Firma Digital Autorizada",
+      "position": [400, 665],
+      "font_size": 9,
+      "color": [0.4, 0.4, 0.4],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "Hash: ABC123DEF456789",
+      "position": [50, 30],
+      "font_size": 7,
+      "color": [0.7, 0.7, 0.7],
+      "pages": "last"
+    }
+  ]
+} 

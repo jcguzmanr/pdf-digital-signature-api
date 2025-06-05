@@ -1,0 +1,25 @@
+{
+  "pdf_path": "input/documento.pdf",
+  "output_path": "output/documento_firmado.pdf",
+  "insertions": [
+    {
+      "type": "text",
+      "content": "Firmado electrónicamente según Ley N° 27269.",
+      "position": [50, 30],
+      "font_size": 9,
+      "pages": "all"
+    },
+    {
+      "type": "image",
+      "source": "assets/rubrica.png",
+      "position": [400, 100],
+      "pages": 3
+    },
+    {
+      "type": "image",
+      "source": "assets/qr.png",
+      "position": [400, 50],
+      "pages": "last"
+    }
+  ]
+} 

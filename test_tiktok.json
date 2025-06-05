@@ -1,0 +1,142 @@
+{
+  "pdf_path": "input/documento.pdf",
+  "output_path": "output/documento_tiktok_demo.pdf",
+  "insertions": [
+    {
+      "type": "text",
+      "content": "🔒 DOCUMENTO FIRMADO DIGITALMENTE 🔒",
+      "position": [50, 40],
+      "font_size": 16,
+      "color": [0.1, 0.1, 0.8],
+      "pages": "first"
+    },
+    {
+      "type": "image",
+      "source": "assets/marca_agua.png",
+      "position": [200, 200],
+      "width": 150,
+      "height": 40,
+      "pages": 2
+    },
+    {
+      "type": "text",
+      "content": "Firmado electrónicamente según Ley N° 27269 - Firma Digital Perú",
+      "position": [50, 750],
+      "font_size": 9,
+      "color": [0.4, 0.4, 0.4],
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Fecha de firma: 05 de Junio 2025 - 11:42:32 GMT-5",
+      "position": [50, 765],
+      "font_size": 8,
+      "color": [0.5, 0.5, 0.5],
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Certificado digital válido hasta: 31/12/2025",
+      "position": [50, 780],
+      "font_size": 8,
+      "color": [0.6, 0.6, 0.6],
+      "pages": "all"
+    },
+    {
+      "type": "image",
+      "source": "assets/rubrica_realista.png",
+      "position": [380, 680],
+      "width": 120,
+      "height": 60,
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "Juan Carlos Guzmán R.",
+      "position": [380, 665],
+      "font_size": 10,
+      "color": [0.2, 0.2, 0.2],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "DNI: 12345678",
+      "position": [380, 650],
+      "font_size": 8,
+      "color": [0.4, 0.4, 0.4],
+      "pages": "last"
+    },
+    {
+      "type": "image",
+      "source": "assets/qr_realista.png",
+      "position": [480, 580],
+      "width": 80,
+      "height": 80,
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "QR Verificación",
+      "position": [485, 565],
+      "font_size": 8,
+      "color": [0.3, 0.3, 0.3],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "Escanea para verificar",
+      "position": [475, 555],
+      "font_size": 7,
+      "color": [0.5, 0.5, 0.5],
+      "pages": "last"
+    },
+    {
+      "type": "image",
+      "source": "assets/sello_oficial.png",
+      "position": [300, 580],
+      "width": 70,
+      "height": 70,
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "✓ DOCUMENTO VERIFICADO ✓",
+      "position": [380, 790],
+      "font_size": 12,
+      "color": [0, 0.7, 0],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "🔐 Firma Digital Autorizada",
+      "position": [380, 745],
+      "font_size": 9,
+      "color": [0.3, 0.3, 0.8],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "Hash SHA-256: ABC123DEF456789GHIJK",
+      "position": [50, 25],
+      "font_size": 7,
+      "color": [0.7, 0.7, 0.7],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "ID Transacción: TX-2025-06-05-001",
+      "position": [50, 15],
+      "font_size": 7,
+      "color": [0.7, 0.7, 0.7],
+      "pages": "last"
+    },
+    {
+      "type": "text",
+      "content": "🌟 DEMO PARA TIKTOK 🌟",
+      "position": [200, 400],
+      "font_size": 20,
+      "color": [1, 0.2, 0.8],
+      "pages": 2
+    }
+  ]
+} 
