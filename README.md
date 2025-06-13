@@ -1,211 +1,231 @@
-# 🔒 PDF Digital Signature API
+# 📄 PDF Digital Signature API
 
-[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-green.svg)](https://fastapi.tiangolo.com)
-[![PyMuPDF](https://img.shields.io/badge/PyMuPDF-1.23.8-red.svg)](https://pymupdf.readthedocs.io)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+API REST para procesamiento de PDFs con inserción de imágenes, texto y firmas digitales. Incluye sistema completo de templates de coordenadas para posicionamiento preciso.
 
-> 🚀 **API profesional para inserción de texto, rúbricas y códigos QR en documentos PDF**
-> 
-> ✨ **Desarrollado con FastAPI y PyMuPDF | Preparado para AWS Lambda**
+## 🚀 Características Principales
 
-![Demo](https://img.shields.io/badge/Demo-TikTok%20Ready-ff69b4.svg)
+- ✅ **Inserción de imágenes** con posicionamiento preciso
+- ✅ **Inserción de texto** con múltiples fuentes y colores
+- ✅ **Sistema de coordenadas optimizado** para PDFs A4
+- ✅ **Templates de cuadrícula** para referencia visual
+- ✅ **Corrección automática de orientación** PyMuPDF
+- ✅ **Validación de entrada** con Pydantic
+- ✅ **API REST** con FastAPI
+- ✅ **Documentación automática** con Swagger/OpenAPI
 
-## 🚀 Características
+## 📍 Sistema de Templates de Coordenadas
 
-- ✅ Inserción de texto personalizado en cualquier posición
-- ✅ Inserción de imágenes (rúbricas, QR, etc.)
-- ✅ Soporte para páginas específicas o todas las páginas
-- ✅ API REST con FastAPI
-- ✅ Documentación automática con Swagger
-- ✅ Preparado para migración a AWS Lambda
-- ✅ Interfaz local para testing
+### Templates Disponibles
 
-## 📂 Estructura del Proyecto
+| Template | Coordenadas | Intervalos | Uso Recomendado |
+|----------|-------------|------------|-----------------|
+| **Debug** | 5 | N/A | Verificación de esquinas |
+| **Optimizado** ⭐ | 1,189 | 20x20 | **Uso general** |
+| **Básico** | 816 | 25x25 | Proyectos simples |
+| **Ultra-Denso** | 5,100 | 10x10 | Máxima precisión |
 
-```
-edit-pdf/
-├── main.py              # API FastAPI
-├── processor.py         # Lógica de procesamiento PDF
-├── requirements.txt     # Dependencias Python
-├── test.json           # JSON de ejemplo
-├── README.md           # Este archivo
-├── venv/              # Entorno virtual
-├── input/             # PDFs originales
-├── output/            # PDFs procesados
-└── assets/            # Imágenes (rúbricas, QR, etc.)
-```
+### 🎯 Template Recomendado
+**`template_coordinates_optimized.json`** - Ideal para la mayoría de casos:
+- Margen seguro de 15 puntos
+- Cobertura completa sin espacios en blanco
+- Basado en dimensiones reales del PDF (595x842 puntos)
 
-## 🛠️ Instalación y Configuración
+## 🛠️ Instalación
 
-### 1. Activar el entorno virtual
+### Prerrequisitos
+- Python 3.8+
+- pip
+
+### Configuración
 ```bash
-source venv/bin/activate
-```
+# Clonar repositorio
+git clone https://github.com/jcguzmanr/pdf-digital-signature-api.git
+cd pdf-digital-signature-api
 
-### 2. Verificar dependencias (ya instaladas)
-```bash
-pip list
-```
+# Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 
-### 3. Crear assets de ejemplo
-```bash
-python processor.py
-```
+# Instalar dependencias
+pip install -r requirements.txt
 
-## 🏃‍♂️ Ejecución
-
-### Iniciar el servidor
-```bash
+# Iniciar servidor
 python main.py
 ```
 
-La API estará disponible en:
-- **Servidor**: http://localhost:8000
-- **Documentación**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
+## 📖 Uso de la API
 
-## 📋 Endpoints Disponibles
+### Endpoint Principal
+```
+POST http://localhost:8000/process-pdf
+```
 
-### `GET /`
-Información general de la API
-
-### `GET /health`
-Estado de salud de la API y directorios
-
-### `POST /process-pdf`
-Procesar PDF con instrucciones JSON
-
-**Ejemplo de body:**
+### Estructura de Request
 ```json
 {
-  "pdf_path": "input/documento.pdf",
-  "output_path": "output/documento_firmado.pdf",
+  "pdf_path": "URL_del_PDF",
+  "output_path": "output/resultado.pdf",
   "insertions": [
     {
       "type": "text",
-      "content": "Firmado electrónicamente según Ley N° 27269.",
-      "position": [50, 30],
-      "font_size": 9,
+      "content": "Texto a insertar",
+      "position": [x, y],
+      "font_size": 12,
+      "color": [0, 0, 0],
+      "font_name": "helv",
       "pages": "all"
     },
     {
       "type": "image",
-      "source": "assets/rubrica.png",
-      "position": [400, 100],
-      "pages": 3
+      "image_path": "URL_de_imagen",
+      "position": [x, y],
+      "size": [width, height],
+      "pages": "all"
     }
   ]
 }
 ```
 
-### `POST /upload-pdf`
-Subir PDF y procesar en una sola operación
-
-### `GET /download/{filename}`
-Descargar archivo procesado
-
-### `GET /list-files`
-Listar archivos en todos los directorios
-
-## 📝 Formato de Inserción
-
-### Inserción de Texto
-```json
-{
-  "type": "text",
-  "content": "Texto a insertar",
-  "position": [x, y],
-  "font_size": 12,
-  "font_name": "helv",
-  "color": [0, 0, 0],
-  "pages": "all"
-}
-```
-
-### Inserción de Imagen
-```json
-{
-  "type": "image",
-  "source": "assets/imagen.png",
-  "position": [x, y],
-  "width": 100,
-  "height": 50,
-  "pages": "last"
-}
-```
-
-### Opciones de Páginas
-- `"all"`: Todas las páginas
-- `"first"`: Primera página
-- `"last"`: Última página
-- `3`: Página específica (número)
-- `[1, 3, 5]`: Lista de páginas
-
-## 🧪 Testing con cURL
-
-### Verificar estado
-```bash
-curl http://localhost:8000/health
-```
-
-### Procesar PDF
+### Ejemplo con Template de Coordenadas
 ```bash
 curl -X POST "http://localhost:8000/process-pdf" \
   -H "Content-Type: application/json" \
-  -d @test.json
+  -d @template_coordinates_optimized.json
 ```
 
-### Listar archivos
+## 🔧 Herramientas de Debug
+
+### Análisis de PDF
 ```bash
-curl http://localhost:8000/list-files
+python debug_pdf_dimensions.py
 ```
+Analiza las dimensiones reales del PDF y genera templates optimizados.
 
-## 📱 Testing con Postman
-
-1. Importar la colección desde: `http://localhost:8000/docs`
-2. Usar el JSON de `test.json` como body
-3. Cambiar el método a POST
-4. URL: `http://localhost:8000/process-pdf`
-
-## 🔧 Preparación para AWS Lambda
-
-El código ya está preparado para migrar a AWS Lambda:
-
-1. **Usar Mangum** para el handler ASGI:
-```python
-from mangum import Mangum
-handler = Mangum(app)
-```
-
-2. **Modificar el procesador** para usar `io.BytesIO` en lugar de archivos locales
-
-3. **Configurar variables de entorno** para S3 o almacenamiento en la nube
-
-## 🚨 Troubleshooting
-
-### Error: "Archivo PDF no encontrado"
-- Asegúrate de que el PDF esté en la carpeta `input/`
-- Verifica la ruta en el JSON
-
-### Error: "Archivo de imagen no encontrado"
-- Verifica que las imágenes estén en `assets/`
-- Ejecuta `python processor.py` para crear imágenes de ejemplo
-
-### Puerto en uso
+### Generación de Templates
 ```bash
-# Cambiar puerto en main.py o usar:
-uvicorn main:app --port 8001
+python generate_ultra_dense_grid.py
+```
+Genera templates personalizados con diferentes densidades.
+
+## 📐 Sistema de Coordenadas
+
+### Información Técnica
+- **Origen:** (0,0) en esquina inferior izquierda
+- **Dimensiones A4:** 595 x 842 puntos
+- **Coordenadas:** Enteros requeridos
+- **Margen recomendado:** 15-20 puntos
+
+### Colores por Zonas
+```
+Y: 0-168   → Rojo        (zona inferior)
+Y: 168-336 → Naranja     
+Y: 336-504 → Amarillo    
+Y: 504-672 → Verde       
+Y: 672-842 → Azul        (zona superior)
 ```
 
-## 📦 Dependencias Principales
+## 📁 Estructura del Proyecto
 
-- **FastAPI**: Framework web moderno
-- **PyMuPDF (fitz)**: Manipulación de PDFs
-- **Uvicorn**: Servidor ASGI
-- **Pillow**: Procesamiento de imágenes
-- **Pydantic**: Validación de datos
+```
+pdf-digital-signature-api/
+├── main.py                              # Servidor FastAPI
+├── processor.py                         # Lógica de procesamiento
+├── requirements.txt                     # Dependencias
+├── README.md                           # Este archivo
+├── DEBUG_RESULTS.md                    # Resultados del debug
+├── README_templates.md                 # Guía de templates
+├── debug_pdf_dimensions.py             # Script de análisis
+├── generate_ultra_dense_grid.py        # Generador de templates
+├── assets/                             # Imágenes de ejemplo
+│   ├── sello_circular_rb.png
+│   ├── sello_kb_original.png
+│   └── sello_rb_100.png
+├── templates/                          # Templates de coordenadas
+│   ├── debug_coordinates_test.json
+│   ├── template_coordinates_optimized.json ⭐
+│   ├── template_coordinates_grid.json
+│   └── template_coordinates_ultra_dense.json
+├── output/                             # PDFs generados
+└── input/                              # PDFs de entrada
+```
+
+## 🧪 Testing con Postman
+
+1. Importar colección: `PDF_Editor_API.postman_collection.json`
+2. Configurar entorno: `PDF_Editor_API.postman_environment.json`
+3. Ver guía: `POSTMAN_SETUP.md`
+
+## 📊 Endpoints Disponibles
+
+### Procesamiento de PDF
+- `POST /process-pdf` - Procesar PDF con inserciones
+- `GET /` - Página de inicio
+- `GET /docs` - Documentación Swagger
+- `GET /health` - Estado del servidor
+
+### Respuesta de Éxito
+```json
+{
+  "success": true,
+  "message": "PDF procesado exitosamente",
+  "output_path": "output/resultado.pdf",
+  "processed_at": "2024-01-15T10:30:00"
+}
+```
+
+## 🔍 Debug y Troubleshooting
+
+### Problemas Comunes
+
+1. **Coordenadas decimales**
+   - ❌ Error: `Input should be a valid integer`
+   - ✅ Solución: Usar coordenadas enteras
+
+2. **Texto fuera de límites**
+   - ❌ Problema: Texto cortado en bordes
+   - ✅ Solución: Usar márgenes de 15-20 puntos
+
+3. **Orientación invertida**
+   - ❌ Problema: Imágenes/texto al revés
+   - ✅ Solución: Sistema automático de corrección incluido
+
+### Logs de Debug
+El sistema incluye logs detallados:
+```
+📍 Insertando texto en: (100, 200) con flip vertical
+📐 Rectángulo de inserción: Rect(50.0, 150.0, 150.0, 250.0)
+✅ Elemento insertado exitosamente
+```
+
+## 🚀 Próximos Pasos
+
+- [ ] Migración a AWS Lambda
+- [ ] Soporte para más formatos de imagen
+- [ ] Templates dinámicos por tipo de documento
+- [ ] API de gestión de templates
+- [ ] Integración con servicios de almacenamiento
 
 ## 📄 Licencia
 
-Proyecto de ejemplo para procesamiento de PDFs con FastAPI. 
+MIT License - Ver archivo `LICENSE` para detalles.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crear rama feature (`git checkout -b feature/AmazingFeature`)
+3. Commit cambios (`git commit -m 'Add AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir Pull Request
+
+## 📞 Soporte
+
+Para soporte técnico o preguntas:
+- Crear issue en GitHub
+- Revisar documentación en `/docs`
+- Consultar `DEBUG_RESULTS.md` para troubleshooting
+
+---
+
+⭐ **¡Dale una estrella al proyecto si te resulta útil!** 
