@@ -1,0 +1,86 @@
+{
+  "pdf_path": "https://thelegalbinder.com/version-test/fileupload/f1749447582865x354337285212396500/Acta%20de%20acuerdo%20de%20compromiso.pdf",
+  "output_path": "output/debug_coordinates_test.pdf",
+  "insertions": [
+    {
+      "type": "text",
+      "content": "Esquina inferior izquierda\n(10,10)",
+      "position": [
+        10,
+        10
+      ],
+      "font_size": 8,
+      "color": [
+        1,
+        0,
+        0
+      ],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Esquina inferior derecha\n(545,10)",
+      "position": [
+        545,
+        10
+      ],
+      "font_size": 8,
+      "color": [
+        0,
+        1,
+        0
+      ],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Esquina superior izquierda\n(10,831)",
+      "position": [
+        10,
+        831
+      ],
+      "font_size": 8,
+      "color": [
+        0,
+        0,
+        1
+      ],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Esquina superior derecha\n(545,831)",
+      "position": [
+        545,
+        831
+      ],
+      "font_size": 8,
+      "color": [
+        1,
+        1,
+        0
+      ],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "Centro\n(297,420)",
+      "position": [
+        297,
+        420
+      ],
+      "font_size": 8,
+      "color": [
+        1,
+        0,
+        1
+      ],
+      "font_name": "helv",
+      "pages": "all"
+    }
+  ]
+}

@@ -1,0 +1,1023 @@
+{
+  "pdf_path": "https://thelegalbinder.com/version-test/fileupload/f1749447582865x354337285212396500/Acta%20de%20acuerdo%20de%20compromiso.pdf",
+  "output_path": "output/template_coordenadas_full.pdf",
+  "insertions": [
+    {
+      "type": "text",
+      "content": "(50,850)",
+      "position": [50, 850],
+      "font_size": 6,
+      "color": [1, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,850)",
+      "position": [150, 850],
+      "font_size": 6,
+      "color": [1, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,850)",
+      "position": [250, 850],
+      "font_size": 6,
+      "color": [1, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,850)",
+      "position": [350, 850],
+      "font_size": 6,
+      "color": [1, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,850)",
+      "position": [450, 850],
+      "font_size": 6,
+      "color": [1, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,850)",
+      "position": [550, 850],
+      "font_size": 6,
+      "color": [1, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,825)",
+      "position": [50, 825],
+      "font_size": 6,
+      "color": [0.8, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(200,825)",
+      "position": [200, 825],
+      "font_size": 6,
+      "color": [0.8, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(400,825)",
+      "position": [400, 825],
+      "font_size": 6,
+      "color": [0.8, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,825)",
+      "position": [550, 825],
+      "font_size": 6,
+      "color": [0.8, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,800)",
+      "position": [50, 800],
+      "font_size": 6,
+      "color": [0.6, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,800)",
+      "position": [150, 800],
+      "font_size": 6,
+      "color": [0.6, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,800)",
+      "position": [250, 800],
+      "font_size": 6,
+      "color": [0.6, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,800)",
+      "position": [350, 800],
+      "font_size": 6,
+      "color": [0.6, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,800)",
+      "position": [450, 800],
+      "font_size": 6,
+      "color": [0.6, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,800)",
+      "position": [550, 800],
+      "font_size": 6,
+      "color": [0.6, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(100,775)",
+      "position": [100, 775],
+      "font_size": 6,
+      "color": [0.4, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(300,775)",
+      "position": [300, 775],
+      "font_size": 6,
+      "color": [0.4, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(500,775)",
+      "position": [500, 775],
+      "font_size": 6,
+      "color": [0.4, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,750)",
+      "position": [50, 750],
+      "font_size": 6,
+      "color": [0.2, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(200,750)",
+      "position": [200, 750],
+      "font_size": 6,
+      "color": [0.2, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,750)",
+      "position": [350, 750],
+      "font_size": 6,
+      "color": [0.2, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(500,750)",
+      "position": [500, 750],
+      "font_size": 6,
+      "color": [0.2, 0, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,700)",
+      "position": [50, 700],
+      "font_size": 6,
+      "color": [0, 0, 1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,700)",
+      "position": [150, 700],
+      "font_size": 6,
+      "color": [0, 0, 1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,700)",
+      "position": [250, 700],
+      "font_size": 6,
+      "color": [0, 0, 1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,700)",
+      "position": [350, 700],
+      "font_size": 6,
+      "color": [0, 0, 1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,700)",
+      "position": [450, 700],
+      "font_size": 6,
+      "color": [0, 0, 1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,700)",
+      "position": [550, 700],
+      "font_size": 6,
+      "color": [0, 0, 1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,650)",
+      "position": [50, 650],
+      "font_size": 6,
+      "color": [0, 0, 0.8],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,650)",
+      "position": [150, 650],
+      "font_size": 6,
+      "color": [0, 0, 0.8],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,650)",
+      "position": [250, 650],
+      "font_size": 6,
+      "color": [0, 0, 0.8],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,650)",
+      "position": [350, 650],
+      "font_size": 6,
+      "color": [0, 0, 0.8],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,650)",
+      "position": [450, 650],
+      "font_size": 6,
+      "color": [0, 0, 0.8],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,650)",
+      "position": [550, 650],
+      "font_size": 6,
+      "color": [0, 0, 0.8],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,600)",
+      "position": [50, 600],
+      "font_size": 6,
+      "color": [0, 0.7, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,600)",
+      "position": [150, 600],
+      "font_size": 6,
+      "color": [0, 0.7, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,600)",
+      "position": [250, 600],
+      "font_size": 6,
+      "color": [0, 0.7, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,600)",
+      "position": [350, 600],
+      "font_size": 6,
+      "color": [0, 0.7, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,600)",
+      "position": [450, 600],
+      "font_size": 6,
+      "color": [0, 0.7, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,600)",
+      "position": [550, 600],
+      "font_size": 6,
+      "color": [0, 0.7, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,550)",
+      "position": [50, 550],
+      "font_size": 6,
+      "color": [0, 0.5, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,550)",
+      "position": [150, 550],
+      "font_size": 6,
+      "color": [0, 0.5, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,550)",
+      "position": [250, 550],
+      "font_size": 6,
+      "color": [0, 0.5, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,550)",
+      "position": [350, 550],
+      "font_size": 6,
+      "color": [0, 0.5, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,550)",
+      "position": [450, 550],
+      "font_size": 6,
+      "color": [0, 0.5, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,550)",
+      "position": [550, 550],
+      "font_size": 6,
+      "color": [0, 0.5, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,500)",
+      "position": [50, 500],
+      "font_size": 6,
+      "color": [0, 0.3, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,500)",
+      "position": [150, 500],
+      "font_size": 6,
+      "color": [0, 0.3, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,500)",
+      "position": [250, 500],
+      "font_size": 6,
+      "color": [0, 0.3, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,500)",
+      "position": [350, 500],
+      "font_size": 6,
+      "color": [0, 0.3, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,500)",
+      "position": [450, 500],
+      "font_size": 6,
+      "color": [0, 0.3, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,500)",
+      "position": [550, 500],
+      "font_size": 6,
+      "color": [0, 0.3, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,450)",
+      "position": [50, 450],
+      "font_size": 6,
+      "color": [0.6, 0, 0.6],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,450)",
+      "position": [150, 450],
+      "font_size": 6,
+      "color": [0.6, 0, 0.6],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,450)",
+      "position": [250, 450],
+      "font_size": 6,
+      "color": [0.6, 0, 0.6],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,450)",
+      "position": [350, 450],
+      "font_size": 6,
+      "color": [0.6, 0, 0.6],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,450)",
+      "position": [450, 450],
+      "font_size": 6,
+      "color": [0.6, 0, 0.6],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,450)",
+      "position": [550, 450],
+      "font_size": 6,
+      "color": [0.6, 0, 0.6],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,400)",
+      "position": [50, 400],
+      "font_size": 6,
+      "color": [0.7, 0, 0.7],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,400)",
+      "position": [150, 400],
+      "font_size": 6,
+      "color": [0.7, 0, 0.7],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,400)",
+      "position": [250, 400],
+      "font_size": 6,
+      "color": [0.7, 0, 0.7],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,400)",
+      "position": [350, 400],
+      "font_size": 6,
+      "color": [0.7, 0, 0.7],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,400)",
+      "position": [450, 400],
+      "font_size": 6,
+      "color": [0.7, 0, 0.7],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,400)",
+      "position": [550, 400],
+      "font_size": 6,
+      "color": [0.7, 0, 0.7],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,350)",
+      "position": [50, 350],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,350)",
+      "position": [150, 350],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,350)",
+      "position": [250, 350],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,350)",
+      "position": [350, 350],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,350)",
+      "position": [450, 350],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,350)",
+      "position": [550, 350],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,300)",
+      "position": [50, 300],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,300)",
+      "position": [150, 300],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,300)",
+      "position": [250, 300],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,300)",
+      "position": [350, 300],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,300)",
+      "position": [450, 300],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,300)",
+      "position": [550, 300],
+      "font_size": 6,
+      "color": [0.8, 0.4, 0],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,250)",
+      "position": [50, 250],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,250)",
+      "position": [150, 250],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,250)",
+      "position": [250, 250],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,250)",
+      "position": [350, 250],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,250)",
+      "position": [450, 250],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,250)",
+      "position": [550, 250],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,200)",
+      "position": [50, 200],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,200)",
+      "position": [150, 200],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,200)",
+      "position": [250, 200],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,200)",
+      "position": [350, 200],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,200)",
+      "position": [450, 200],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,200)",
+      "position": [550, 200],
+      "font_size": 6,
+      "color": [0, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,150)",
+      "position": [50, 150],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,150)",
+      "position": [150, 150],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,150)",
+      "position": [250, 150],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,150)",
+      "position": [350, 150],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,150)",
+      "position": [450, 150],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,150)",
+      "position": [550, 150],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,100)",
+      "position": [50, 100],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,100)",
+      "position": [150, 100],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,100)",
+      "position": [250, 100],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,100)",
+      "position": [350, 100],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,100)",
+      "position": [450, 100],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,100)",
+      "position": [550, 100],
+      "font_size": 6,
+      "color": [0.5, 0.5, 0.5],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,50)",
+      "position": [50, 50],
+      "font_size": 6,
+      "color": [0.3, 0.3, 0.3],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,50)",
+      "position": [150, 50],
+      "font_size": 6,
+      "color": [0.3, 0.3, 0.3],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,50)",
+      "position": [250, 50],
+      "font_size": 6,
+      "color": [0.3, 0.3, 0.3],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,50)",
+      "position": [350, 50],
+      "font_size": 6,
+      "color": [0.3, 0.3, 0.3],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,50)",
+      "position": [450, 50],
+      "font_size": 6,
+      "color": [0.3, 0.3, 0.3],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,50)",
+      "position": [550, 50],
+      "font_size": 6,
+      "color": [0.3, 0.3, 0.3],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(50,10)",
+      "position": [50, 10],
+      "font_size": 6,
+      "color": [0.1, 0.1, 0.1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(150,10)",
+      "position": [150, 10],
+      "font_size": 6,
+      "color": [0.1, 0.1, 0.1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(250,10)",
+      "position": [250, 10],
+      "font_size": 6,
+      "color": [0.1, 0.1, 0.1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(350,10)",
+      "position": [350, 10],
+      "font_size": 6,
+      "color": [0.1, 0.1, 0.1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(450,10)",
+      "position": [450, 10],
+      "font_size": 6,
+      "color": [0.1, 0.1, 0.1],
+      "font_name": "helv",
+      "pages": "all"
+    },
+    {
+      "type": "text",
+      "content": "(550,10)",
+      "position": [550, 10],
+      "font_size": 6,
+      "color": [0.1, 0.1, 0.1],
+      "font_name": "helv",
+      "pages": "all"
+    }
+  ]
+} 
