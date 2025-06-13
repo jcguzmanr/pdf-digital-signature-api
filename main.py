@@ -34,14 +34,18 @@ app.add_middleware(
 # Modelos Pydantic
 class Insertion(BaseModel):
     type: str  # "text" o "image"
-    content: Optional[str] = None  # Para texto
-    source: Optional[str] = None   # Para imagen
-    position: List[int]
+    source: Optional[str] = None  # Para imágenes: URL o ruta del archivo
+    content: Optional[str] = None  # Para texto: contenido a insertar
+    position: List[int]  # [x, y] posición donde insertar
     font_size: Optional[int] = 12
     font_name: Optional[str] = "helv"
-    color: Optional[List[float]] = [0, 0, 0]
+    color: Optional[List[float]] = [0, 0, 0]  # RGB
     width: Optional[int] = None
     height: Optional[int] = None
+    rotate: Optional[int] = 0
+    flip: Optional[str] = None  # "horizontal", "vertical" o "both"
+    correct_orientation: Optional[bool] = True # Para controlar la corrección EXIF
+    flip_type: Optional[str] = "horizontal"  # "horizontal", "vertical", "rotate_180", "transpose", "transverse"
     pages: Union[str, int, List[int]] = "all"
 
 class PDFRequest(BaseModel):
