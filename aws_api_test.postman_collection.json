@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-4a5b-8c7d-9e8f7a6b5c4d",
+		"name": "PDF Editor API - AWS Lambda Test",
+		"description": "Colección para probar la API de edición de PDF desplegada en AWS Lambda + API Gateway.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload and Process PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"description": "Selecciona el archivo PDF que deseas procesar.",
+							"src": []
+						},
+						{
+							"key": "insertions",
+							"value": "[\n    {\n        \"type\": \"text\",\n        \"content\": \"Hola desde AWS Lambda!\",\n        \"position\": [50, 50],\n        \"font_size\": 16,\n        \"color\": [1, 0, 0],\n        \"pages\": \"all\"\n    },\n    {\n        \"type\": \"image\",\n        \"source\": \"assets/logo.png\",\n        \"position\": [200, 200],\n        \"width\": 100,\n        \"height\": 50,\n        \"pages\": [1]\n    }\n]",
+							"type": "text",
+							"description": "Un string que contiene un array de objetos de inserción en formato JSON."
+						}
+					]
+				},
+				"url": {
+					"raw": "https://850fuq0pp7.execute-api.us-east-1.amazonaws.com/prod/upload-and-process",
+					"protocol": "https",
+					"host": [
+						"850fuq0pp7",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"prod",
+						"upload-and-process"
+					]
+				},
+				"description": "Envía un archivo PDF y una lista de instrucciones (inserciones) a la API. La API procesa el PDF, lo sube a S3 y devuelve una URL de descarga segura."
+			},
+			"response": []
+		}
+	]
+} 
