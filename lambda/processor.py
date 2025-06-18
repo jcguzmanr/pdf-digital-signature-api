@@ -184,7 +184,8 @@ class PDFProcessor:
             insertion: Diccionario con los datos de la inserción
         """
         insertion_type = insertion.get("type")
-        pages = insertion.get("pages")
+        # Manejar tanto "pages" como "page" para compatibilidad
+        pages = insertion.get("pages") or insertion.get("page", "all")
         position = insertion.get("position", [0, 0])
         
         if insertion_type not in ["text", "image"]:
@@ -242,6 +243,11 @@ class PDFProcessor:
         font_size = insertion.get("font_size", 12)
         color = insertion.get("color", [0, 0, 0])  # Negro por defecto
         font_name = insertion.get("font_name", "helv")  # Helvetica por defecto
+        
+        # Normalizar color: si los valores están en rango 0-255, convertir a 0-1
+        if color and len(color) >= 3:
+            if any(c > 1 for c in color[:3]):
+                color = [c/255.0 for c in color[:3]]
         
         # PyMuPDF usa el sistema de coordenadas PDF nativo (origen en esquina inferior izquierda)
         # Las coordenadas de entrada ya están en el sistema correcto

@@ -1,0 +1,345 @@
+{
+  "info": {
+    "name": "PDF Editor API",
+    "description": "API para procesamiento de PDFs - Inserción de texto e imágenes\n\n🔗 Repository: https://github.com/jcguzmanr/pdf-digital-signature-api\n📖 Docs: {{baseUrl}}/docs\n🏥 Health: {{baseUrl}}/health",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "updatedAt": "2025-06-11T12:30:00.000Z"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://dps4ok6dzjz3xxwratehxwqufe0ukcou.lambda-url.us-east-1.on.aws",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "🏠 API Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"],
+          "path": [""]
+        },
+        "description": "Obtener información general de la API y sus endpoints disponibles"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response has API info', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('message');",
+              "    pm.expect(jsonData).to.have.property('version');",
+              "    pm.expect(jsonData).to.have.property('endpoints');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "🏥 Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": ["{{baseUrl}}"],
+          "path": ["health"]
+        },
+        "description": "Verificar el estado de salud de la API y los directorios"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('API is healthy', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.status).to.eql('healthy');",
+              "});",
+              "",
+              "pm.test('Directories exist', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.directories.input).to.be.true;",
+              "    pm.expect(jsonData.directories.output).to.be.true;",
+              "    pm.expect(jsonData.directories.assets).to.be.true;",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "📁 List Files",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/list-files",
+          "host": ["{{baseUrl}}"],
+          "path": ["list-files"]
+        },
+        "description": "Listar todos los archivos disponibles en los directorios input, output y assets"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response has file directories', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('input');",
+              "    pm.expect(jsonData).to.have.property('output');",
+              "    pm.expect(jsonData).to.have.property('assets');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "📄 Process PDF - Simple",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pdf_path\": \"input/documento.pdf\",\n  \"output_path\": \"output/documento_firmado_postman.pdf\",\n  \"insertions\": [\n    {\n      \"type\": \"text\",\n      \"content\": \"Firmado electrónicamente según Ley N° 27269.\",\n      \"position\": [50, 30],\n      \"font_size\": 9,\n      \"pages\": \"all\"\n    },\n    {\n      \"type\": \"image\",\n      \"source\": \"assets/rubrica.png\",\n      \"position\": [400, 100],\n      \"pages\": 3\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/process-pdf",
+          "host": ["{{baseUrl}}"],
+          "path": ["process-pdf"]
+        },
+        "description": "Procesar un PDF con inserción simple de texto y una imagen"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('PDF processed successfully', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.message).to.include('exitosamente');",
+              "    pm.expect(jsonData).to.have.property('output_path');",
+              "});",
+              "",
+              "// Guardar output_path para usar en download",
+              "const responseJson = pm.response.json();",
+              "if (responseJson.output_path) {",
+              "    const filename = responseJson.output_path.split('/').pop();",
+              "    pm.collectionVariables.set('lastProcessedFile', filename);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "📄 Process PDF - Complete",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pdf_path\": \"input/documento.pdf\",\n  \"output_path\": \"output/documento_completo_postman.pdf\",\n  \"insertions\": [\n    {\n      \"type\": \"text\",\n      \"content\": \"DOCUMENTO OFICIAL\",\n      \"position\": [200, 50],\n      \"font_size\": 16,\n      \"color\": [0, 0, 1],\n      \"pages\": \"first\"\n    },\n    {\n      \"type\": \"text\",\n      \"content\": \"Firmado electrónicamente según Ley N° 27269.\",\n      \"position\": [50, 30],\n      \"font_size\": 9,\n      \"color\": [0.5, 0.5, 0.5],\n      \"pages\": \"all\"\n    },\n    {\n      \"type\": \"image\",\n      \"source\": \"assets/rubrica_realista.png\",\n      \"position\": [400, 100],\n      \"width\": 120,\n      \"height\": 60,\n      \"pages\": \"last\"\n    },\n    {\n      \"type\": \"image\",\n      \"source\": \"assets/qr_realista.png\",\n      \"position\": [450, 50],\n      \"width\": 80,\n      \"height\": 80,\n      \"pages\": \"last\"\n    },\n    {\n      \"type\": \"image\",\n      \"source\": \"assets/sello_oficial.png\",\n      \"position\": [50, 100],\n      \"width\": 100,\n      \"height\": 100,\n      \"pages\": [1, 3]\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/process-pdf",
+          "host": ["{{baseUrl}}"],
+          "path": ["process-pdf"]
+        },
+        "description": "Procesar PDF con múltiples insercciones: texto en diferentes páginas, imágenes con dimensiones específicas"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('PDF processed successfully', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData).to.have.property('output_path');",
+              "    pm.expect(jsonData).to.have.property('processed_at');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "📤 Upload & Process PDF",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "input/documento.pdf",
+              "description": "Archivo PDF a procesar"
+            },
+            {
+              "key": "insertions",
+              "value": "[\n  {\n    \"type\": \"text\",\n    \"content\": \"Procesado vía Upload API\",\n    \"position\": [100, 50],\n    \"font_size\": 12,\n    \"color\": [0, 0.5, 0],\n    \"pages\": \"first\"\n  },\n  {\n    \"type\": \"image\",\n    \"source\": \"assets/qr.png\",\n    \"position\": [400, 200],\n    \"pages\": \"last\"\n  }\n]",
+              "type": "text",
+              "description": "JSON con las instrucciones de inserción"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/upload-pdf",
+          "host": ["{{baseUrl}}"],
+          "path": ["upload-pdf"]
+        },
+        "description": "Subir un archivo PDF y procesarlo con instrucciones en una sola operación"
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response has a download URL', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('download_url');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "🔗 Process PDF from URL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pdf_path\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\",\n  \"insertions\": [\n    {\n      \"type\": \"text\",\n      \"content\": \"Texto de prueba desde URL\",\n      \"position\": [ 10, 10 ],\n      \"font_size\": 12,\n      \"color\": [ 1, 0, 0 ],\n      \"font_name\": \"helv\",\n      \"pages\": \"all\"\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/process-from-url",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "process-from-url"
+          ]
+        },
+        "description": "Descarga un PDF desde una URL, le aplica inserciones y lo guarda en S3, devolviendo una URL de descarga."
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('PDF processed successfully from URL', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.message).to.include('exitosamente');",
+              "    pm.expect(jsonData).to.have.property('download_url');",
+              "    pm.expect(jsonData).to.have.property('s3_key');",
+              "});",
+              "",
+              "// Guardar s3_key y download_url para usos posteriores",
+              "const responseJson = pm.response.json();",
+              "if (responseJson.s3_key) {",
+              "    pm.collectionVariables.set('lastS3Key', responseJson.s3_key);",
+              "}",
+              "if (responseJson.download_url) {",
+              "    pm.collectionVariables.set('lastDownloadUrl', responseJson.download_url);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ]
+} 

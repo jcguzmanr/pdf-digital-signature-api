@@ -253,8 +253,9 @@
               "    pm.response.to.have.status(200);",
               "});",
               "",
-              "pm.test('Response is PDF file', function () {",
-              "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/pdf');",
+              "pm.test('Response has a download URL', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData).to.have.property('download_url');",
               "});"
             ],
             "type": "text/javascript"
@@ -323,6 +324,68 @@
           }
         }
       ]
+    },
+    {
+      "name": "🔗 Process PDF from URL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"pdf_path\": \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\",\n  \"insertions\": [\n    {\n      \"type\": \"text\",\n      \"content\": \"Texto de prueba desde URL\",\n      \"position\": [ 10, 10 ],\n      \"font_size\": 12,\n      \"color\": [ 1, 0, 0 ],\n      \"font_name\": \"helv\",\n      \"pages\": \"all\"\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/process-from-url",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "process-from-url"
+          ]
+        },
+        "description": "Descarga un PDF desde una URL, le aplica inserciones y lo guarda en S3, devolviendo una URL de descarga."
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('PDF processed successfully from URL', function () {",
+              "    const jsonData = pm.response.json();",
+              "    pm.expect(jsonData.success).to.be.true;",
+              "    pm.expect(jsonData.message).to.include('exitosamente');",
+              "    pm.expect(jsonData).to.have.property('download_url');",
+              "    pm.expect(jsonData).to.have.property('s3_key');",
+              "});",
+              "",
+              "// Guardar s3_key y download_url para usos posteriores",
+              "const responseJson = pm.response.json();",
+              "if (responseJson.s3_key) {",
+              "    pm.collectionVariables.set('lastS3Key', responseJson.s3_key);",
+              "}",
+              "if (responseJson.download_url) {",
+              "    pm.collectionVariables.set('lastDownloadUrl', responseJson.download_url);",
+              "}"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
     }
   ],
   "event": [
@@ -330,22 +393,14 @@
       "listen": "prerequest",
       "script": {
         "type": "text/javascript",
-        "exec": [
-          "// Script que se ejecuta antes de cada request",
-          "console.log('🚀 Ejecutando request a PDF Editor API');",
-          "console.log('📅 Timestamp:', new Date().toISOString());"
-        ]
+        "exec": [""]
       }
     },
     {
       "listen": "test",
       "script": {
         "type": "text/javascript",
-        "exec": [
-          "// Script que se ejecuta después de cada response",
-          "console.log('✅ Response recibida:', pm.response.status, pm.response.statusText);",
-          "console.log('⏱️  Response time:', pm.response.responseTime + 'ms');"
-        ]
+        "exec": [""]
       }
     }
   ]

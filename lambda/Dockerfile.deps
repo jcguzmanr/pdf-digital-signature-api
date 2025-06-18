@@ -1,0 +1,19 @@
+FROM --platform=linux/amd64 python:3.9-slim
+
+# Install zip utility
+RUN apt-get update && apt-get install -y zip && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy requirements
+COPY requirements.txt .
+
+# Install dependencies to a target directory
+RUN pip install -r requirements.txt -t ./dependencies
+
+# Copy source files
+COPY main.py ./dependencies/
+COPY processor.py ./dependencies/
+
+# Create the zip
+RUN cd dependencies && zip -r ../lambda-deployment-docker.zip . 
